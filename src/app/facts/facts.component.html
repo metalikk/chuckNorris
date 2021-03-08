@@ -1,0 +1,9 @@
+<button cnButton routerLink="/home">Go back</button>
+<button cnButton defaultColor="info">Refresh</button>
+
+<div *ngIf="factsCategories$ | async as factsCategories; else loading">
+    <div *ngFor="let category of factsCategories">
+        <button  cnButton (click)="getRandomFact(category)">{{ category }}</button><br /><br />
+    </div> 
+</div>
+<ng-template #loading>Loading ....</ng-template>
