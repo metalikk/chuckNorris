@@ -1,9 +1,53 @@
-<button cnButton routerLink="/home">Go back</button>
-<button cnButton defaultColor="info">Refresh</button>
+<div class="d-flex ">
+  <div class="flex-2 bg-color-blue">
+    <nav>
+      <div
+        class="d-flex flex-direction-column align-items-center"
+        *ngIf="factsCategories$ | async as factsCategories; else loading"
+      >
+        <div *ngFor="let category of factsCategories">
+          <button
+            cnButton
+            class="btn-link font-family-lucida font-size-cat1"
+            routerLink="/categories"
+            (click)="getRandomFact(category)"
+          >
+            {{ category }}</button
+          ><br /><br /><br />
+        </div>
+      </div>
+      <ng-template #loading>Loading ....</ng-template>
+    </nav>
+  </div>
+  <div class="d-flex flex-direction-column flex-full align-items-center mt-12 ">
+    <div *ngIf="fact$ | async as fact; else capture">
 
-<div *ngIf="factsCategories$ | async as factsCategories; else loading">
-    <div *ngFor="let category of factsCategories">
-        <button  cnButton (click)="getRandomFact(category)">{{ category }}</button><br /><br />
-    </div> 
+<div >
+<div class="card-h font-size-cat1 text-align" width = "50" >
+  <img [src]="fact.icon_url" alt="" />
 </div>
-<ng-template #loading>Loading ....</ng-template>
+
+<div class="card-c " width = "50">
+          {{ fact.value}}
+</div>
+<div class="font-size-cat1 text-align " width = "50">
+  Created at:{{fact.created_at}}
+        
+</div>
+
+<div class=" card-f text-align size-pic">
+        <img width="68%" src="../../assets/img/chuck-norris-usa.gif" alt="" />
+</div>
+</div>
+    </div>
+    <ng-template #capture>
+      <img src="../assets/img/chucknorris.jpg" alt="" />
+    </ng-template>
+
+    <div class="mt-12">
+      <button cnButton class="btn-facts border" routerLink="/home">
+        Go back
+      </button>
+    </div>
+  </div>
+</div>

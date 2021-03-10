@@ -1,2 +1,122 @@
 /* You can add global styles to this file, and also import other style files */
-@import 'button.scss';
+@import "button.scss";
+@import url("https://fonts.googleapis.com/css2?family=Black+Ops+One&family=Oi&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Chonburi&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Allerta&display=swap');
+
+body {
+  margin: 0;
+}
+
+.d-flex {
+  display: flex;
+}
+
+.flex-full {
+  flex: 1;
+}
+
+.flex-2 {
+  flex: 0.2;
+}
+
+.flex-direction-column {
+  flex-direction: column;
+}
+
+.justify-center {
+  justify-content: center;
+}
+
+.align-items-center {
+  align-items: center;
+}
+
+.font-family-lucida {
+  font-family: Black Ops One;
+}
+
+.border {
+  border-radius: 30px;
+  -webkit-border-radius: 30px;
+  -moz-border-radius: 30px;
+  -ms-border-radius: 30px;
+  -o-border-radius: 30px;
+}
+h1 {
+  color: black;
+  background: rgb(63, 58, 180);
+  background: linear-gradient(
+    90deg,
+    rgba(63, 58, 180, 1) 0%,
+    rgba(253, 29, 29, 1) 49%,
+    rgba(252, 69, 99, 1) 100%
+  );
+}
+
+.p-12 {
+  padding: 12px;
+}
+
+.mt-12 {
+  margin-top: 12px;
+}
+
+.bg-color-blue {
+  background: rgb(63,94,251);
+  background: radial-gradient(circle, rgba(63,94,251,1) 0%, rgba(15,40,221,0.8701855742296919) 4%, rgba(226,11,54,1) 100%);
+}
+.btn-link{
+  border:none;
+  background: none;
+}
+.font-size-fact{
+  font-size: 25px;
+  font-weight: bold;
+  font-family: Chonburi;
+  color: red;
+
+}
+.text-align{
+  text-align: center;
+}
+
+.card-h{
+  border:1px solid;
+  border-color: blue;
+  border-radius: 20px;
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  -ms-border-radius: 20px;
+  -o-border-radius: 20px;
+  background-image: url(../assets/img/flag.jpeg);
+  margin: 10px;
+}
+.card-c{
+  border:3px solid;
+  border-color: blue;
+  border-radius: 20px;
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  -ms-border-radius: 20px;
+  -o-border-radius: 20px;
+  background: rgb(201, 184, 154);
+  margin: 10px;
+  font-size: 25px;
+  font-weight: bold;
+  font-family: Chonburi;
+  color: black;
+  display: block;
+}
+.card-f{
+  border-radius: 20px;
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  -ms-border-radius: 20px;
+  -o-border-radius: 20px;
+}
+.font-size-cat1{
+  font-size: 18px;
+  font-family: Allerta;
+  font-weight: bold;
+}
