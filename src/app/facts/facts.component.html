@@ -27,7 +27,7 @@
   <img [src]="fact.icon_url" alt="" />
 </div>
 
-<div class="card-c " width = "50">
+<div class="card-c  card" width = "50">
           {{ fact.value}}
 </div>
 <div class="font-size-cat1 text-align " width = "50">
@@ -48,6 +48,13 @@
       <button cnButton class="btn-facts border" routerLink="/home">
         Go back
       </button>
+      <button *ngIf = "!show" class="btn-facts border" FButton (click)= "lanceFlamme()">
+        Allumer le feux
+      </button>
+      <button *ngIf = "show" class="btn-facts border" FButton (click)= "lanceFlamme()">
+        Calmer chuck
+      </button>
+      <div *ngIf = "show"><img width="600px"src="../../assets/img/AridLastingAmericancrow-small.gif" alt=""></div> 
     </div>
   </div>
 </div>

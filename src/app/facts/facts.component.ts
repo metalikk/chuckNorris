@@ -9,6 +9,8 @@ import { FactsFacadeService } from "./services/facade/facts-facade.service";
   styleUrls: ["./facts.component.scss"],
 })
 export class FactsComponent implements OnInit {
+  public show : boolean = false;
+
   public factsCategories$: Observable<string[]>;
 
   public fact$: Observable<IFact>;
@@ -25,5 +27,9 @@ export class FactsComponent implements OnInit {
     this.factsFacadeService.loadFactByCategory(category);
     this.fact$ = this.factsFacadeService.getFactByCategory$();
 
+  }
+
+  public lanceFlamme(): void {
+  this.show = !this.show;
   }
 }
