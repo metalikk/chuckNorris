@@ -29,7 +29,7 @@ export class FactsComponent implements OnInit {
 
   }
 
-  public lanceFlamme(): void {
+  public fireControl(): void {
   this.show = !this.show;
   }
 }

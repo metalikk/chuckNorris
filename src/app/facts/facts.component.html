@@ -48,13 +48,13 @@
       <button cnButton class="btn-facts border" routerLink="/home">
         Go back
       </button>
-      <button *ngIf = "!show" class="btn-facts border" FButton (click)= "lanceFlamme()">
+      <button *ngIf = "!show" class="btn-facts border" FButton (click)= "fireControl()">
         Allumer le feux
       </button>
-      <button *ngIf = "show" class="btn-facts border" FButton (click)= "lanceFlamme()">
+      <button *ngIf = "show" class="btn-facts border" FButton (click)= "fireControl()">
         Calmer chuck
       </button>
-      <div *ngIf = "show"><img width="600px"src="../../assets/img/AridLastingAmericancrow-small.gif" alt=""></div> 
+      <div *ngIf = "show"><img width="600px"src="../../assets/img/fire.gif" alt=""></div> 
     </div>
   </div>
 </div>
